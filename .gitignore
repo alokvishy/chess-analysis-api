@@ -13,12 +13,8 @@ venv/
 .vscode/
 .idea/
 
-# OS files
+# OS
 .DS_Store
 
 # Engines / binaries
 stockfish*
-__pycache__/
-*.pyc
-*.pyo
-*.pyd

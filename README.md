@@ -1,11 +1,14 @@
-chess-analysis-api
+# chess-analysis-api
+
 ♟️ Chess Analysis API
 
-Production-grade FastAPI backend for chess game analysis and engine play using Stockfish. Designed with clean architecture, performance-aware engine pooling, and extensible domain logic.
+Production-grade FastAPI backend for chess game analysis and engine play using Stockfish.
+Designed with clean architecture, performance-aware engine pooling, and extensible domain logic.
 
 This project focuses on correct system design, clear separation of concerns, and real-world backend practices, not just chess logic.
 
-🚀 Features Game Analysis
+🚀 Features
+Game Analysis
 
 Full PGN game analysis
 
@@ -17,7 +20,7 @@ BOOK, BRILLIANT, BEST, GOOD, INACCURACY, MISTAKE, BLUNDER
 
 Key moments detection (blunders, turning points, missed wins)
 
-Opening detection with ECO codes & names
+Opening detection with ECO codes \& names
 
 Opening book recognition (excluded from stats)
 
@@ -47,7 +50,14 @@ Adaptive depth scaling based on ELO
 
 The codebase follows a clean, layered architecture with strict boundaries:
 
-app/ ├── api/ # FastAPI routers (thin controllers) ├── services/ # Orchestration & business flow ├── domain/ # Pure chess logic (no FastAPI / engine imports) ├── infrastructure/ # Stockfish engine pool & wrappers ├── schemas/ # Request/response contracts ├── core/ # Configuration & application lifecycle Design Principles
+app/
+├── api/            # FastAPI routers (thin controllers)
+├── services/       # Orchestration \& business flow
+├── domain/         # Pure chess logic (no FastAPI / engine imports)
+├── infrastructure/ # Stockfish engine pool \& wrappers
+├── schemas/        # Request/response contracts
+├── core/           # Configuration \& application lifecycle
+Design Principles
 
 Domain layer is framework-independent
 
@@ -75,11 +85,14 @@ Prevents engine exhaustion and resource leaks
 
 Supports concurrent analysis requests
 
-📡 API Endpoints Analyze Game
+📡 API Endpoints
+Analyze Game
 
 POST /api/v1/analysis
 
-{ "pgn": "1.e4 e5 2.Nf3 Nc6 ..." }
+{
+"pgn": "1.e4 e5 2.Nf3 Nc6 ..."
+}
 
 Returns:
 
@@ -97,7 +110,10 @@ Play vs Engine
 
 POST /api/v1/play/move
 
-{ "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1", "elo": 1200 }
+{
+"fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+"elo": 1200
+}
 
 Returns:
 
@@ -155,4 +171,6 @@ Educational platforms
 
 👤 Author
 
-Alok Vishwakarma Backend-focused developer with strong interest in system design, chess engines, and clean architecture.
+Alok Vishwakarma
+Backend-focused developer with strong interest in system design, chess engines, and clean architecture.
+
